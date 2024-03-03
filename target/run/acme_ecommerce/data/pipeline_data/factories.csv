@@ -1,10 +1,12 @@
 
     
     
-    truncate table "ANALYTICS"."ANALYTICS_USER"."FACTORIES";
+    
+    create table acme_ecommerce.reference_data.factories (factory_id integer,location_id  integer,size  text,number_of_employees integer, in_use boolean)
+  ;
     -- dbt seed --
     
-            insert into analytics.ANALYTICS_USER.factories (factory_id, location_id , size , number_of_employees,  in_use) values
+            insert into acme_ecommerce.reference_data.factories (factory_id, location_id , size , number_of_employees,  in_use) values
             (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
         
 

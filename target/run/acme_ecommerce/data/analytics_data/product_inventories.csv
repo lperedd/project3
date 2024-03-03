@@ -1,10 +1,12 @@
 
     
     
-    truncate table "ANALYTICS"."ANALYTICS_USER"."PRODUCT_INVENTORIES";
+    
+    create table acme_ecommerce.reference_data.product_inventories (prod_id integer,stock_arrival_date text,stock_depleted_date text,purchase_price integer)
+  ;
     -- dbt seed --
     
-            insert into analytics.ANALYTICS_USER.product_inventories (prod_id, stock_arrival_date, stock_depleted_date, purchase_price) values
+            insert into acme_ecommerce.reference_data.product_inventories (prod_id, stock_arrival_date, stock_depleted_date, purchase_price) values
             (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
         
 

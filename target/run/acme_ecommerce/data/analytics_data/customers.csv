@@ -1,10 +1,10 @@
 
     
     
-    truncate table "ANALYTICS"."ANALYTICS_USER"."CUSTOMERS";
+    truncate table "ACME_ECOMMERCE"."REFERENCE_DATA"."CUSTOMERS";
     -- dbt seed --
     
-            insert into analytics.ANALYTICS_USER.customers (customer_code, first_name, last_name, email, country_id) values
+            insert into acme_ecommerce.reference_data.customers (customer_code, first_name, last_name, email, country_id) values
             (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
         
 

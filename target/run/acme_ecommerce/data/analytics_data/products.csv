@@ -1,10 +1,10 @@
 
     
     
-    truncate table "ANALYTICS"."ANALYTICS_USER"."PRODUCTS";
+    truncate table "ACME_ECOMMERCE"."REFERENCE_DATA"."PRODUCTS";
     -- dbt seed --
     
-            insert into analytics.ANALYTICS_USER.products (prod_id, prod_name, prod_cat) values
+            insert into acme_ecommerce.reference_data.products (prod_id, prod_name, prod_cat) values
             (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
         
 
