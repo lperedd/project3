@@ -2,7 +2,7 @@
   
     
 
-        create or replace transient table analytics.ANALYTICS_USER_marts.ecommerce__actuals_vs_forecasts
+        create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__actuals_vs_forecasts
          as
         (with
     orders as (
@@ -16,23 +16,23 @@
             sum(order_quantity) as order_quantity,
             sum(transaction_price_usd) as actual_sales,
             sum(transaction_price_usd) / sum(order_quantity) as sell_price_per_unit
-        from  analytics.ANALYTICS_USER_staging.stg_transactional_src__orders
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__orders
         group by 1, 2, 3, 4, 5
     ),
     products as (
         select product_id, product_name, product_category
-        from analytics.ANALYTICS_USER_staging.stg_reference_data_src__products
+        from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
     ),
     inventory as (
         select distinct product_id, avg(purchase_price) as net_cost_per_unit
         from
-           analytics.ANALYTICS_USER_staging.stg_product_inventory_src__product_inventories
+           acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
         group by 1
 
     ),
     forecasts as (
         select forecast_date_month, product_id, forecast_sales, forecast_profit
-        from  analytics.ANALYTICS_USER_staging.stg_transactional_src__forecasts
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
 
     ),
     merged as (

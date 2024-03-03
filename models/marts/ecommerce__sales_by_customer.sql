@@ -41,6 +41,7 @@ countries as (
 merged as (
     select customers.*,
     orders.* exclude(customer_id),
+    {{label_ecommerce__sales_by_customer("orders.transaction_price_usd")}}  as customer_sales_band,
     products.* exclude(product_id),
     countries.* exclude (country_code)
     from customers left join orders using (customer_id)

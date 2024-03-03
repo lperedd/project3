@@ -1,5 +1,5 @@
 
-  create or replace   view analytics.ANALYTICS_USER_staging.stg_product_inventory_src__product_inventories
+  create or replace   view acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
   
    as (
     with

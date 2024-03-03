@@ -1,5 +1,5 @@
 
-  create or replace   view analytics.ANALYTICS_USER_staging.stg_transactional_src__forecasts
+  create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
   
    as (
     with

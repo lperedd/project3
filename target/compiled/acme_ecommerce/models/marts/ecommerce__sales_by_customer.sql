@@ -12,7 +12,7 @@ with orders as (
         product_id,
         sum(order_quantity) as order_quantity,
         sum(transaction_price_usd) as transaction_price_usd
-    from analytics.ANALYTICS_USER_staging.stg_transactional_src__orders
+    from acme_ecommerce.reference_data_staging.stg_transactional_src__orders
     group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ),
 products as (
@@ -20,7 +20,7 @@ products as (
         product_id,
         product_name,
         product_category
-    from analytics.ANALYTICS_USER_staging.stg_reference_data_src__products
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
 ),
 customers as (
     select distinct
@@ -28,19 +28,28 @@ customers as (
         customer_name,
         country_code,
         customer_email_address
-    from analytics.ANALYTICS_USER_staging.stg_reference_data_src__customers
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
    where customer_email_address <> 'NOT_A_VALID_EMAIL@example.com' --Filter to remove invalid emails for Email Marketing
    
 ),
 countries as (
     select distinct
         country_code, country, region 
-    from analytics.ANALYTICS_USER_staging.stg_reference_data_src__countries
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
    
 ),
 merged as (
     select customers.*,
     orders.* exclude(customer_id),
+    
+    CASE
+  WHEN orders.transaction_price_usd BETWEEN 0 AND 1000 THEN '$0-1000'
+  WHEN orders.transaction_price_usd BETWEEN 1001 AND 5000 THEN '$1001-5000'
+  WHEN orders.transaction_price_usd > 5000 THEN '$5000+'
+  ELSE 'NOT LABELED'
+END
+
+  as customer_sales_band,
     products.* exclude(product_id),
     countries.* exclude (country_code)
     from customers left join orders using (customer_id)

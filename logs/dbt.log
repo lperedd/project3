@@ -18874,3 +18874,1419 @@ select * from final
 [0m20:28:45.734442 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
 [0m20:28:45.738446 [debug] [MainThread]: Command `dbt run` succeeded at 20:28:45.737438 after 11.39 seconds
 [0m20:28:45.739462 [debug] [MainThread]: Flushing usage events
+
+
+============================== 23:10:35.496216 | 82812343-1dc4-4a07-a962-cbf9e49fc888 ==============================
+[0m23:10:35.496216 [info ] [MainThread]: Running with dbt=1.7.9
+[0m23:10:35.504879 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\luism\\Desktop\\data\\github_repos\\sliide', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\luism\\Desktop\\data\\github_repos\\sliide\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'False'}
+[0m23:10:38.102126 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m23:10:38.137250 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m23:10:38.216100 [info ] [MainThread]: Unable to do partial parsing because env vars used in profiles.yml have changed
+[0m23:10:41.061925 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'source_name' in the 'models' section of file 'models\marts\_marts_models.yml'
+[0m23:10:41.518899 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.acme_ecommerce.intermediate
+[0m23:10:41.552897 [info ] [MainThread]: Found 8 models, 8 seeds, 3 tests, 7 sources, 1 exposure, 0 metrics, 811 macros, 0 groups, 0 semantic models
+[0m23:10:41.555949 [info ] [MainThread]: 
+[0m23:10:41.558897 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:10:41.563898 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce'
+[0m23:10:41.583936 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce"
+[0m23:10:41.585901 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce'
+[0m23:10:41.586900 [debug] [ThreadPool]: On list_acme_ecommerce: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce"} */
+show terse schemas in database acme_ecommerce
+    limit 10000
+[0m23:10:41.591905 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce"
+[0m23:10:41.592905 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:41.593902 [debug] [ThreadPool]: On list_acme_ecommerce: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce"} */
+show terse schemas in database acme_ecommerce
+    limit 10000
+[0m23:10:41.598899 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:43.162949 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m23:10:43.163918 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m23:10:43.169919 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_acme_ecommerce, now create_acme_ecommerce_reference_data_staging)
+[0m23:10:43.170918 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_acme_ecommerce, now create_acme_ecommerce_reference_data_marts)
+[0m23:10:43.172919 [debug] [ThreadPool]: Creating schema "database: "acme_ecommerce"
+schema: "reference_data_staging"
+"
+[0m23:10:43.173919 [debug] [ThreadPool]: Creating schema "database: "acme_ecommerce"
+schema: "reference_data_marts"
+"
+[0m23:10:43.183056 [debug] [ThreadPool]: Using snowflake connection "create_acme_ecommerce_reference_data_staging"
+[0m23:10:43.189091 [debug] [ThreadPool]: Using snowflake connection "create_acme_ecommerce_reference_data_marts"
+[0m23:10:43.190931 [debug] [ThreadPool]: On create_acme_ecommerce_reference_data_staging: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "create_acme_ecommerce_reference_data_staging"} */
+create schema if not exists acme_ecommerce.reference_data_staging
+[0m23:10:43.192045 [debug] [ThreadPool]: On create_acme_ecommerce_reference_data_marts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "create_acme_ecommerce_reference_data_marts"} */
+create schema if not exists acme_ecommerce.reference_data_marts
+[0m23:10:43.303635 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:10:43.316681 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:10:43.322665 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data_staging'
+[0m23:10:43.335674 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data_staging"
+[0m23:10:43.336675 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data_marts'
+[0m23:10:43.338714 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data'
+[0m23:10:43.339714 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data_staging: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data_staging"} */
+show terse objects in acme_ecommerce.reference_data_staging limit 10000
+[0m23:10:43.343702 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data_marts"
+[0m23:10:43.348741 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data"
+[0m23:10:43.349703 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:43.350142 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data_marts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data_marts"} */
+show terse objects in acme_ecommerce.reference_data_marts limit 10000
+[0m23:10:43.351187 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data"} */
+show terse objects in acme_ecommerce.reference_data limit 10000
+[0m23:10:43.354154 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:43.355151 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:44.675781 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m23:10:44.678831 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m23:10:44.683846 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m23:10:44.710779 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m23:10:44.713537 [info ] [MainThread]: 
+[0m23:10:44.726873 [debug] [Thread-1 (]: Began running node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:10:44.728869 [debug] [Thread-2 (]: Began running node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:10:44.730873 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:10:44.732883 [debug] [Thread-4 (]: Began running node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:10:44.734916 [info ] [Thread-1 (]: 1 of 8 START sql view model reference_data_staging.stg_product_inventory_src__product_inventories  [RUN]
+[0m23:10:44.736873 [info ] [Thread-2 (]: 2 of 8 START sql view model reference_data_staging.stg_reference_data_src__countries  [RUN]
+[0m23:10:44.739875 [info ] [Thread-3 (]: 3 of 8 START sql view model reference_data_staging.stg_reference_data_src__customers  [RUN]
+[0m23:10:44.743875 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_product_inventory_src__product_inventories'
+[0m23:10:44.741871 [info ] [Thread-4 (]: 4 of 8 START sql view model reference_data_staging.stg_reference_data_src__products  [RUN]
+[0m23:10:44.747922 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__countries'
+[0m23:10:44.748907 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__customers'
+[0m23:10:44.750907 [debug] [Thread-1 (]: Began compiling node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:10:44.752871 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__products'
+[0m23:10:44.753916 [debug] [Thread-2 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:10:44.754870 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:10:44.769908 [debug] [Thread-1 (]: Writing injected SQL for node "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:10:44.770874 [debug] [Thread-4 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:10:44.775871 [debug] [Thread-2 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:10:44.781876 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:10:44.787907 [debug] [Thread-4 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:10:44.788869 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.stg_product_inventory_src__product_inventories (compile): 23:10:44.755870 => 23:10:44.788869
+[0m23:10:44.791874 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__countries (compile): 23:10:44.771869 => 23:10:44.790870
+[0m23:10:44.792891 [debug] [Thread-1 (]: Began executing node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:10:44.794869 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__products (compile): 23:10:44.783874 => 23:10:44.793872
+[0m23:10:44.795835 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__customers (compile): 23:10:44.776868 => 23:10:44.795835
+[0m23:10:44.796633 [debug] [Thread-2 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:10:44.902682 [debug] [Thread-1 (]: Writing runtime sql for node "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:10:44.903715 [debug] [Thread-4 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:10:44.904684 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:10:44.909646 [debug] [Thread-2 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:10:44.914810 [debug] [Thread-4 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:10:44.919811 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:10:44.921772 [debug] [Thread-1 (]: Using snowflake connection "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:10:44.924773 [debug] [Thread-1 (]: On model.acme_ecommerce.stg_product_inventory_src__product_inventories: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_product_inventory_src__product_inventories"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.product_inventories.inventory),
+    final as (
+        select
+            prod_id as product_id,
+            to_variant(to_date(stock_arrival_date, 'MM/DD/YY'))::date
+            as stock_arrival_date,
+            to_variant(to_date(stock_depleted_date, 'MM/DD/YY'))::date
+            as stock_depleted_date,
+            purchase_price
+
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:10:44.925773 [debug] [Thread-2 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:10:44.926812 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:10:44.928772 [debug] [Thread-4 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:10:44.929433 [debug] [Thread-2 (]: On model.acme_ecommerce.stg_reference_data_src__countries: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__countries"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.countries),
+    final as (select ALPHA_2_COUNTRY_CODE as country_code, country, region from source where active_flag = true)
+
+select *
+from final
+  );
+[0m23:10:44.931305 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:10:44.933817 [debug] [Thread-4 (]: On model.acme_ecommerce.stg_reference_data_src__products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__products"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.products),
+    final as (
+        select prod_id as product_id, prod_name as product_name, prod_cat as product_category from source
+    )
+
+select *
+from final
+  );
+[0m23:10:44.934818 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:10:44.936819 [debug] [Thread-3 (]: On model.acme_ecommerce.stg_reference_data_src__customers: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__customers"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.customers),
+    final as (
+        select
+            customer_code as customer_id ,
+            first_name as customer_first_name  ,
+            last_name as customer_last_name,
+            concat(first_name, ' ', last_name) as customer_name,
+            case
+                when
+                    regexp_like(
+                        email, '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                    )
+                then email
+                else 'NOT_A_VALID_EMAIL@example.com'  --all invalid email formats renamed to this one
+            end as customer_email_address,
+            country_id as country_code
+
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:10:44.937819 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:10:44.941830 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:10:46.094296 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:10:46.099352 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:10:46.105354 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:10:46.184337 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__products (execute): 23:10:44.910762 => 23:10:46.183337
+[0m23:10:46.191332 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__countries (execute): 23:10:44.905684 => 23:10:46.190322
+[0m23:10:46.199327 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__customers (execute): 23:10:44.915810 => 23:10:46.198328
+[0m23:10:46.203291 [info ] [Thread-4 (]: 4 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__products  [[32mSUCCESS 1[0m in 1.45s]
+[0m23:10:46.206329 [info ] [Thread-2 (]: 2 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__countries  [[32mSUCCESS 1[0m in 1.46s]
+[0m23:10:46.213771 [debug] [Thread-4 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:10:46.209813 [info ] [Thread-3 (]: 3 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__customers  [[32mSUCCESS 1[0m in 1.46s]
+[0m23:10:46.216768 [debug] [Thread-2 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:10:46.218770 [debug] [Thread-4 (]: Began running node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:10:46.221763 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:10:46.224771 [debug] [Thread-2 (]: Began running node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:10:46.228777 [info ] [Thread-4 (]: 5 of 8 START sql view model reference_data_staging.stg_transactional_src__forecasts  [RUN]
+[0m23:10:46.232298 [info ] [Thread-2 (]: 6 of 8 START sql view model reference_data_staging.stg_transactional_src__orders  [RUN]
+[0m23:10:46.235300 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__products, now model.acme_ecommerce.stg_transactional_src__forecasts)
+[0m23:10:46.237936 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__countries, now model.acme_ecommerce.stg_transactional_src__orders)
+[0m23:10:46.240935 [debug] [Thread-4 (]: Began compiling node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:10:46.242937 [debug] [Thread-2 (]: Began compiling node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:10:46.248969 [debug] [Thread-4 (]: Writing injected SQL for node "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:10:46.253930 [debug] [Thread-2 (]: Writing injected SQL for node "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:10:46.255955 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_transactional_src__forecasts (compile): 23:10:46.243950 => 23:10:46.254929
+[0m23:10:46.257931 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_transactional_src__orders (compile): 23:10:46.248969 => 23:10:46.256934
+[0m23:10:46.259955 [debug] [Thread-4 (]: Began executing node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:10:46.260938 [debug] [Thread-2 (]: Began executing node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:10:46.266967 [debug] [Thread-4 (]: Writing runtime sql for node "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:10:46.276931 [debug] [Thread-2 (]: Writing runtime sql for node "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:10:46.279929 [debug] [Thread-4 (]: Using snowflake connection "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:10:46.280930 [debug] [Thread-4 (]: On model.acme_ecommerce.stg_transactional_src__forecasts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_transactional_src__forecasts"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.forecasts),
+    final as (
+        select
+            date_part(month, to_date(month, 'MM-YY')) as forecast_month,
+            date_part(year, to_date(month, 'MM-YY')) as forecast_year,
+            cast(TO_CHAR(TO_DATE(month, 'MM-YY'), 'YYYY-MM-DD') as date) AS forecast_date_month,
+            product as product_id,
+            forecast_sales,
+            forecast_profit
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:10:46.283928 [debug] [Thread-2 (]: Using snowflake connection "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:10:46.286929 [debug] [Thread-2 (]: On model.acme_ecommerce.stg_transactional_src__orders: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_transactional_src__orders"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+  
+   as (
+    with
+    source1 as (select * from acme_ecommerce.transactional.orders_2024_q3),
+    source2 as (select * from acme_ecommerce.transactional.orders_2024_q3),
+    merged as (select * from source1 union all select * from source2),
+    final as (
+        select
+            transaction_date,
+            DATE_TRUNC('MONTH', transaction_date)  as transaction_date_month,
+            month(transaction_date) as transaction_month,
+            quarter(transaction_date) as transaction_quarter,
+            year(transaction_date) as transaction_year,
+            shipping_date as shipped_date,
+            month(shipping_date) as shipped_month,
+            quarter(shipping_date) as shipped_quarter,
+            year(shipping_date) as shipped_year,
+            transaction_id,
+            product_id,
+            customer_id,
+            quantity as order_quantity,
+            transaction_price_usd
+        from merged
+    )
+
+select *
+from final
+  );
+[0m23:10:46.302933 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:10:46.306940 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.stg_product_inventory_src__product_inventories (execute): 23:10:44.796633 => 23:10:46.305929
+[0m23:10:46.308935 [info ] [Thread-1 (]: 1 of 8 OK created sql view model reference_data_staging.stg_product_inventory_src__product_inventories  [[32mSUCCESS 1[0m in 1.57s]
+[0m23:10:46.310969 [debug] [Thread-1 (]: Finished running node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:10:46.411971 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:10:46.414966 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_transactional_src__forecasts (execute): 23:10:46.260938 => 23:10:46.414966
+[0m23:10:46.416970 [info ] [Thread-4 (]: 5 of 8 OK created sql view model reference_data_staging.stg_transactional_src__forecasts  [[32mSUCCESS 1[0m in 0.18s]
+[0m23:10:46.418970 [debug] [Thread-4 (]: Finished running node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:10:46.433274 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:10:46.441275 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_transactional_src__orders (execute): 23:10:46.267965 => 23:10:46.440275
+[0m23:10:46.444277 [info ] [Thread-2 (]: 6 of 8 OK created sql view model reference_data_staging.stg_transactional_src__orders  [[32mSUCCESS 1[0m in 0.21s]
+[0m23:10:46.448284 [debug] [Thread-2 (]: Finished running node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:10:46.452274 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:10:46.453310 [debug] [Thread-1 (]: Began running node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:10:46.454515 [info ] [Thread-3 (]: 7 of 8 START sql table model reference_data_marts.ecommerce__actuals_vs_forecasts  [RUN]
+[0m23:10:46.459773 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__customers, now model.acme_ecommerce.ecommerce__actuals_vs_forecasts)
+[0m23:10:46.455758 [info ] [Thread-1 (]: 8 of 8 START sql table model reference_data_marts.ecommerce__sales_by_customer . [RUN]
+[0m23:10:46.460773 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:10:46.462772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_product_inventory_src__product_inventories, now model.acme_ecommerce.ecommerce__sales_by_customer)
+[0m23:10:46.471811 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:10:46.473775 [debug] [Thread-1 (]: Began compiling node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:10:46.482812 [debug] [Thread-1 (]: Writing injected SQL for node "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:10:46.484779 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.ecommerce__actuals_vs_forecasts (compile): 23:10:46.463774 => 23:10:46.484779
+[0m23:10:46.486773 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.ecommerce__sales_by_customer (compile): 23:10:46.475775 => 23:10:46.485777
+[0m23:10:46.487650 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:10:46.488674 [debug] [Thread-1 (]: Began executing node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:10:46.526696 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:10:46.531686 [debug] [Thread-1 (]: Writing runtime sql for node "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:10:46.537375 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:10:46.540376 [debug] [Thread-1 (]: Using snowflake connection "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:10:46.541376 [debug] [Thread-3 (]: On model.acme_ecommerce.ecommerce__actuals_vs_forecasts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"} */
+create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__actuals_vs_forecasts
+         as
+        (with
+    orders as (
+        select
+
+            transaction_date_month,
+            transaction_month,
+            transaction_quarter,
+            transaction_year,
+            product_id,
+            sum(order_quantity) as order_quantity,
+            sum(transaction_price_usd) as actual_sales,
+            sum(transaction_price_usd) / sum(order_quantity) as sell_price_per_unit
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+        group by 1, 2, 3, 4, 5
+    ),
+    products as (
+        select product_id, product_name, product_category
+        from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+    ),
+    inventory as (
+        select distinct product_id, avg(purchase_price) as net_cost_per_unit
+        from
+           acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
+        group by 1
+
+    ),
+    forecasts as (
+        select forecast_date_month, product_id, forecast_sales, forecast_profit
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
+
+    ),
+    merged as (
+        select
+            orders.*,
+            products.* exclude(product_id),
+            inventory.* exclude(product_id),
+            forecasts.* exclude(forecast_date_month, product_id)
+
+        from orders
+        left join products using (product_id)
+        left join inventory using (product_id)
+        left join
+            forecasts
+            on orders.transaction_date_month = forecasts.forecast_date_month
+
+            and orders.product_id = forecasts.product_id
+
+    ),
+    actual_profit as (
+        select
+            *,
+            (actual_sales) - ((net_cost_per_unit) * (order_quantity)) as actual_profit
+
+        from merged
+    ),
+    final as (
+        select
+            *,
+            lag(actual_profit) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as actual_profit_last_month,
+            lag(forecast_profit) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as forecast_profit_last_month,
+            lag(actual_sales) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as actual_sales_last_month,
+
+            lag(forecast_sales) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as forecast_sales_last_month
+
+        from actual_profit
+
+    )
+select *
+from final
+        );
+[0m23:10:46.542378 [debug] [Thread-1 (]: On model.acme_ecommerce.ecommerce__sales_by_customer: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.ecommerce__sales_by_customer"} */
+create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__sales_by_customer
+         as
+        (with orders as (
+    select
+        transaction_date,
+        transaction_month,
+        transaction_quarter,
+        transaction_year,
+        shipped_date,
+        shipped_month,
+        shipped_quarter,
+        shipped_year,
+        customer_id,
+        product_id,
+        sum(order_quantity) as order_quantity,
+        sum(transaction_price_usd) as transaction_price_usd
+    from acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+),
+products as (
+    select
+        product_id,
+        product_name,
+        product_category
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+),
+customers as (
+    select distinct
+        customer_id,
+        customer_name,
+        country_code,
+        customer_email_address
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
+   where customer_email_address <> 'NOT_A_VALID_EMAIL@example.com' --Filter to remove invalid emails for Email Marketing
+   
+),
+countries as (
+    select distinct
+        country_code, country, region 
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
+   
+),
+merged as (
+    select customers.*,
+    orders.* exclude(customer_id),
+    
+    CASE
+  WHEN orders.transaction_price_usd BETWEEN 0 AND 1000 THEN '$0-1000'
+  WHEN orders.transaction_price_usd BETWEEN 1001 AND 5000 THEN '$1001-5000'
+  WHEN orders.transaction_price_usd > 5000 THEN '$5000+'
+  ELSE 'NOT LABELED'
+END AS customer_sales_band,
+
+ as customer_sales_band,
+    products.* exclude(product_id),
+    countries.* exclude (country_code)
+    from customers left join orders using (customer_id)
+    left join products using (product_id) left join countries using (country_code)
+),
+final as(
+    select * from merged
+    where product_id IS NOT NULL
+)
+select * from final
+        );
+[0m23:10:46.795261 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b2c00e-0000-cf1e-0000-0001827e6c99
+[0m23:10:46.796260 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 54 at position 1 unexpected 'as'.
+[0m23:10:46.797261 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.ecommerce__sales_by_customer (execute): 23:10:46.527727 => 23:10:46.797261
+[0m23:10:46.804945 [debug] [Thread-1 (]: Database Error in model ecommerce__sales_by_customer (models\marts\ecommerce__sales_by_customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 54 at position 1 unexpected 'as'.
+  compiled Code at target\run\acme_ecommerce\models\marts\ecommerce__sales_by_customer.sql
+[0m23:10:46.805940 [error] [Thread-1 (]: 8 of 8 ERROR creating sql table model reference_data_marts.ecommerce__sales_by_customer  [[31mERROR[0m in 0.34s]
+[0m23:10:46.807915 [debug] [Thread-1 (]: Finished running node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:10:48.246739 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m23:10:48.254735 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.ecommerce__actuals_vs_forecasts (execute): 23:10:46.489689 => 23:10:48.253735
+[0m23:10:48.257735 [info ] [Thread-3 (]: 7 of 8 OK created sql table model reference_data_marts.ecommerce__actuals_vs_forecasts  [[32mSUCCESS 1[0m in 1.80s]
+[0m23:10:48.260968 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:10:48.265970 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:10:48.267973 [debug] [MainThread]: Connection 'create_acme_ecommerce_reference_data_marts' was left open.
+[0m23:10:48.268972 [debug] [MainThread]: On create_acme_ecommerce_reference_data_marts: Close
+[0m23:10:48.399908 [debug] [MainThread]: Connection 'create_acme_ecommerce_reference_data_staging' was left open.
+[0m23:10:48.400909 [debug] [MainThread]: On create_acme_ecommerce_reference_data_staging: Close
+[0m23:10:48.477610 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data_staging' was left open.
+[0m23:10:48.478612 [debug] [MainThread]: On list_acme_ecommerce_reference_data_staging: Close
+[0m23:10:48.662469 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data_marts' was left open.
+[0m23:10:48.664467 [debug] [MainThread]: On list_acme_ecommerce_reference_data_marts: Close
+[0m23:10:48.781377 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data' was left open.
+[0m23:10:48.782377 [debug] [MainThread]: On list_acme_ecommerce_reference_data: Close
+[0m23:10:48.836276 [debug] [MainThread]: Connection 'model.acme_ecommerce.ecommerce__sales_by_customer' was left open.
+[0m23:10:48.837274 [debug] [MainThread]: On model.acme_ecommerce.ecommerce__sales_by_customer: Close
+[0m23:10:48.893531 [debug] [MainThread]: Connection 'model.acme_ecommerce.stg_transactional_src__orders' was left open.
+[0m23:10:48.894532 [debug] [MainThread]: On model.acme_ecommerce.stg_transactional_src__orders: Close
+[0m23:10:48.976093 [debug] [MainThread]: Connection 'model.acme_ecommerce.ecommerce__actuals_vs_forecasts' was left open.
+[0m23:10:48.979046 [debug] [MainThread]: On model.acme_ecommerce.ecommerce__actuals_vs_forecasts: Close
+[0m23:10:49.167910 [debug] [MainThread]: Connection 'model.acme_ecommerce.stg_transactional_src__forecasts' was left open.
+[0m23:10:49.170915 [debug] [MainThread]: On model.acme_ecommerce.stg_transactional_src__forecasts: Close
+[0m23:10:49.288744 [info ] [MainThread]: 
+[0m23:10:49.289621 [info ] [MainThread]: Finished running 6 view models, 2 table models in 0 hours 0 minutes and 7.73 seconds (7.73s).
+[0m23:10:49.293671 [debug] [MainThread]: Command end result
+[0m23:10:49.317631 [info ] [MainThread]: 
+[0m23:10:49.321645 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m23:10:49.322633 [info ] [MainThread]: 
+[0m23:10:49.324641 [error] [MainThread]:   Database Error in model ecommerce__sales_by_customer (models\marts\ecommerce__sales_by_customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 54 at position 1 unexpected 'as'.
+  compiled Code at target\run\acme_ecommerce\models\marts\ecommerce__sales_by_customer.sql
+[0m23:10:49.327635 [info ] [MainThread]: 
+[0m23:10:49.328632 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
+[0m23:10:49.331636 [debug] [MainThread]: Command `dbt run` failed at 23:10:49.331636 after 13.95 seconds
+[0m23:10:49.332637 [debug] [MainThread]: Flushing usage events
+
+
+============================== 23:11:09.208281 | 1291cdee-32bf-410d-9534-7fd93e148bf5 ==============================
+[0m23:11:09.208281 [info ] [MainThread]: Running with dbt=1.7.9
+[0m23:11:09.213264 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\luism\\Desktop\\data\\github_repos\\sliide', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\luism\\Desktop\\data\\github_repos\\sliide\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m23:11:10.914338 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m23:11:10.943344 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m23:11:11.222986 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:11:11.223987 [debug] [MainThread]: Partial parsing: updated file: acme_ecommerce://models\marts\ecommerce__sales_by_customer.sql
+[0m23:11:11.835987 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.acme_ecommerce.intermediate
+[0m23:11:11.870988 [info ] [MainThread]: Found 8 models, 8 seeds, 3 tests, 7 sources, 1 exposure, 0 metrics, 811 macros, 0 groups, 0 semantic models
+[0m23:11:11.875962 [info ] [MainThread]: 
+[0m23:11:11.877961 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:11:11.880963 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce'
+[0m23:11:11.883959 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce'
+[0m23:11:11.901996 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce"
+[0m23:11:11.906959 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce"
+[0m23:11:11.908961 [debug] [ThreadPool]: On list_acme_ecommerce: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce"} */
+show terse schemas in database acme_ecommerce
+    limit 10000
+[0m23:11:11.909961 [debug] [ThreadPool]: On list_acme_ecommerce: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce"} */
+show terse schemas in database acme_ecommerce
+    limit 10000
+[0m23:11:11.909961 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:11:11.911964 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:11:13.169880 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.0 seconds
+[0m23:11:13.173940 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.0 seconds
+[0m23:11:13.197491 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data_staging'
+[0m23:11:13.201555 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data_marts'
+[0m23:11:13.227485 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data_staging"
+[0m23:11:13.229528 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data'
+[0m23:11:13.236527 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data_marts"
+[0m23:11:13.238484 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data_staging: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data_staging"} */
+show terse objects in acme_ecommerce.reference_data_staging limit 10000
+[0m23:11:13.243849 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data"
+[0m23:11:13.244852 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data_marts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data_marts"} */
+show terse objects in acme_ecommerce.reference_data_marts limit 10000
+[0m23:11:13.245784 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:11:13.246628 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data"} */
+show terse objects in acme_ecommerce.reference_data limit 10000
+[0m23:11:13.247437 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:11:13.250492 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:11:14.265398 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:11:14.268399 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.0 seconds
+[0m23:11:14.345845 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m23:11:14.360890 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m23:11:14.364863 [info ] [MainThread]: 
+[0m23:11:14.380862 [debug] [Thread-1 (]: Began running node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:11:14.382805 [debug] [Thread-2 (]: Began running node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:11:14.385807 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:11:14.387181 [debug] [Thread-4 (]: Began running node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:11:14.389202 [info ] [Thread-1 (]: 1 of 8 START sql view model reference_data_staging.stg_product_inventory_src__product_inventories  [RUN]
+[0m23:11:14.392204 [info ] [Thread-2 (]: 2 of 8 START sql view model reference_data_staging.stg_reference_data_src__countries  [RUN]
+[0m23:11:14.394243 [info ] [Thread-3 (]: 3 of 8 START sql view model reference_data_staging.stg_reference_data_src__customers  [RUN]
+[0m23:11:14.400200 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_product_inventory_src__product_inventories'
+[0m23:11:14.397202 [info ] [Thread-4 (]: 4 of 8 START sql view model reference_data_staging.stg_reference_data_src__products  [RUN]
+[0m23:11:14.404206 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__countries'
+[0m23:11:14.408207 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__customers'
+[0m23:11:14.410207 [debug] [Thread-1 (]: Began compiling node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:11:14.412202 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__products'
+[0m23:11:14.413201 [debug] [Thread-2 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:11:14.414201 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:11:14.436235 [debug] [Thread-1 (]: Writing injected SQL for node "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:11:14.437226 [debug] [Thread-4 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:11:14.443239 [debug] [Thread-2 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:11:14.450238 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:11:14.455237 [debug] [Thread-4 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:11:14.457206 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.stg_product_inventory_src__product_inventories (compile): 23:11:14.415201 => 23:11:14.456222
+[0m23:11:14.459214 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__countries (compile): 23:11:14.438198 => 23:11:14.459214
+[0m23:11:14.461207 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__customers (compile): 23:11:14.444199 => 23:11:14.460216
+[0m23:11:14.462200 [debug] [Thread-1 (]: Began executing node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:11:14.463202 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__products (compile): 23:11:14.451237 => 23:11:14.463202
+[0m23:11:14.464201 [debug] [Thread-2 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:11:14.465202 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:11:14.584196 [debug] [Thread-1 (]: Writing runtime sql for node "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:11:14.585196 [debug] [Thread-4 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:11:14.591197 [debug] [Thread-2 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:11:14.597134 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:11:14.605965 [debug] [Thread-4 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:11:14.608322 [debug] [Thread-1 (]: Using snowflake connection "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:11:14.610504 [debug] [Thread-2 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:11:14.613163 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:11:14.614070 [debug] [Thread-1 (]: On model.acme_ecommerce.stg_product_inventory_src__product_inventories: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_product_inventory_src__product_inventories"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.product_inventories.inventory),
+    final as (
+        select
+            prod_id as product_id,
+            to_variant(to_date(stock_arrival_date, 'MM/DD/YY'))::date
+            as stock_arrival_date,
+            to_variant(to_date(stock_depleted_date, 'MM/DD/YY'))::date
+            as stock_depleted_date,
+            purchase_price
+
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:11:14.615785 [debug] [Thread-2 (]: On model.acme_ecommerce.stg_reference_data_src__countries: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__countries"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.countries),
+    final as (select ALPHA_2_COUNTRY_CODE as country_code, country, region from source where active_flag = true)
+
+select *
+from final
+  );
+[0m23:11:14.617563 [debug] [Thread-4 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:11:14.618710 [debug] [Thread-3 (]: On model.acme_ecommerce.stg_reference_data_src__customers: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__customers"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.customers),
+    final as (
+        select
+            customer_code as customer_id ,
+            first_name as customer_first_name  ,
+            last_name as customer_last_name,
+            concat(first_name, ' ', last_name) as customer_name,
+            case
+                when
+                    regexp_like(
+                        email, '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                    )
+                then email
+                else 'NOT_A_VALID_EMAIL@example.com'  --all invalid email formats renamed to this one
+            end as customer_email_address,
+            country_id as country_code
+
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:11:14.619766 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:11:14.620691 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:11:14.621757 [debug] [Thread-4 (]: On model.acme_ecommerce.stg_reference_data_src__products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__products"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.products),
+    final as (
+        select prod_id as product_id, prod_name as product_name, prod_cat as product_category from source
+    )
+
+select *
+from final
+  );
+[0m23:11:14.622828 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:11:14.629503 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:11:15.774870 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:11:15.820808 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:11:15.822823 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:11:15.829844 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__products (execute): 23:11:14.598439 => 23:11:15.829844
+[0m23:11:15.831845 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:11:15.834843 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__customers (execute): 23:11:14.591197 => 23:11:15.834843
+[0m23:11:15.838805 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.stg_product_inventory_src__product_inventories (execute): 23:11:14.466202 => 23:11:15.838805
+[0m23:11:15.844844 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__countries (execute): 23:11:14.585196 => 23:11:15.843844
+[0m23:11:15.840846 [info ] [Thread-4 (]: 4 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__products  [[32mSUCCESS 1[0m in 1.43s]
+[0m23:11:15.845843 [info ] [Thread-3 (]: 3 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__customers  [[32mSUCCESS 1[0m in 1.44s]
+[0m23:11:15.847808 [info ] [Thread-1 (]: 1 of 8 OK created sql view model reference_data_staging.stg_product_inventory_src__product_inventories  [[32mSUCCESS 1[0m in 1.45s]
+[0m23:11:15.851810 [debug] [Thread-4 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:11:15.850847 [info ] [Thread-2 (]: 2 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__countries  [[32mSUCCESS 1[0m in 1.45s]
+[0m23:11:15.854809 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:11:15.856819 [debug] [Thread-1 (]: Finished running node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:11:15.857807 [debug] [Thread-4 (]: Began running node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:11:15.859845 [debug] [Thread-2 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:11:15.860827 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:11:15.862812 [info ] [Thread-4 (]: 5 of 8 START sql view model reference_data_staging.stg_transactional_src__forecasts  [RUN]
+[0m23:11:15.866815 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__products, now model.acme_ecommerce.stg_transactional_src__forecasts)
+[0m23:11:15.864819 [info ] [Thread-3 (]: 6 of 8 START sql view model reference_data_staging.stg_transactional_src__orders  [RUN]
+[0m23:11:15.867805 [debug] [Thread-4 (]: Began compiling node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:11:15.868839 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__customers, now model.acme_ecommerce.stg_transactional_src__orders)
+[0m23:11:15.874822 [debug] [Thread-4 (]: Writing injected SQL for node "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:11:15.876809 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:11:15.883842 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:11:15.884809 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_transactional_src__forecasts (compile): 23:11:15.869843 => 23:11:15.883842
+[0m23:11:15.885809 [debug] [Thread-4 (]: Began executing node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:11:15.890806 [debug] [Thread-4 (]: Writing runtime sql for node "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:11:15.891808 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_transactional_src__orders (compile): 23:11:15.877806 => 23:11:15.891808
+[0m23:11:15.893804 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:11:15.899845 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:11:15.900804 [debug] [Thread-4 (]: Using snowflake connection "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:11:15.902809 [debug] [Thread-4 (]: On model.acme_ecommerce.stg_transactional_src__forecasts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_transactional_src__forecasts"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.forecasts),
+    final as (
+        select
+            date_part(month, to_date(month, 'MM-YY')) as forecast_month,
+            date_part(year, to_date(month, 'MM-YY')) as forecast_year,
+            cast(TO_CHAR(TO_DATE(month, 'MM-YY'), 'YYYY-MM-DD') as date) AS forecast_date_month,
+            product as product_id,
+            forecast_sales,
+            forecast_profit
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:11:15.904845 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:11:15.907808 [debug] [Thread-3 (]: On model.acme_ecommerce.stg_transactional_src__orders: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_transactional_src__orders"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+  
+   as (
+    with
+    source1 as (select * from acme_ecommerce.transactional.orders_2024_q3),
+    source2 as (select * from acme_ecommerce.transactional.orders_2024_q3),
+    merged as (select * from source1 union all select * from source2),
+    final as (
+        select
+            transaction_date,
+            DATE_TRUNC('MONTH', transaction_date)  as transaction_date_month,
+            month(transaction_date) as transaction_month,
+            quarter(transaction_date) as transaction_quarter,
+            year(transaction_date) as transaction_year,
+            shipping_date as shipped_date,
+            month(shipping_date) as shipped_month,
+            quarter(shipping_date) as shipped_quarter,
+            year(shipping_date) as shipped_year,
+            transaction_id,
+            product_id,
+            customer_id,
+            quantity as order_quantity,
+            transaction_price_usd
+        from merged
+    )
+
+select *
+from final
+  );
+[0m23:11:16.193107 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:11:16.205094 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_transactional_src__orders (execute): 23:11:15.893804 => 23:11:16.203097
+[0m23:11:16.209102 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:11:16.213102 [info ] [Thread-3 (]: 6 of 8 OK created sql view model reference_data_staging.stg_transactional_src__orders  [[32mSUCCESS 1[0m in 0.34s]
+[0m23:11:16.223102 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_transactional_src__forecasts (execute): 23:11:15.886807 => 23:11:16.222102
+[0m23:11:16.228093 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:11:16.237053 [debug] [Thread-1 (]: Began running node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:11:16.233089 [info ] [Thread-4 (]: 5 of 8 OK created sql view model reference_data_staging.stg_transactional_src__forecasts  [[32mSUCCESS 1[0m in 0.37s]
+[0m23:11:16.242042 [info ] [Thread-1 (]: 7 of 8 START sql table model reference_data_marts.ecommerce__sales_by_customer . [RUN]
+[0m23:11:16.245037 [debug] [Thread-4 (]: Finished running node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:11:16.248077 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_product_inventory_src__product_inventories, now model.acme_ecommerce.ecommerce__sales_by_customer)
+[0m23:11:16.250038 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:11:16.251394 [debug] [Thread-1 (]: Began compiling node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:11:16.264922 [debug] [Thread-1 (]: Writing injected SQL for node "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:11:16.253918 [info ] [Thread-3 (]: 8 of 8 START sql table model reference_data_marts.ecommerce__actuals_vs_forecasts  [RUN]
+[0m23:11:16.267917 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_transactional_src__orders, now model.acme_ecommerce.ecommerce__actuals_vs_forecasts)
+[0m23:11:16.269915 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.ecommerce__sales_by_customer (compile): 23:11:16.253918 => 23:11:16.269915
+[0m23:11:16.271916 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:11:16.272551 [debug] [Thread-1 (]: Began executing node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:11:16.282569 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:11:16.313323 [debug] [Thread-1 (]: Writing runtime sql for node "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:11:16.316285 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.ecommerce__actuals_vs_forecasts (compile): 23:11:16.273567 => 23:11:16.315285
+[0m23:11:16.319309 [debug] [Thread-1 (]: Using snowflake connection "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:11:16.320324 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:11:16.321287 [debug] [Thread-1 (]: On model.acme_ecommerce.ecommerce__sales_by_customer: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.ecommerce__sales_by_customer"} */
+create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__sales_by_customer
+         as
+        (with orders as (
+    select
+        transaction_date,
+        transaction_month,
+        transaction_quarter,
+        transaction_year,
+        shipped_date,
+        shipped_month,
+        shipped_quarter,
+        shipped_year,
+        customer_id,
+        product_id,
+        sum(order_quantity) as order_quantity,
+        sum(transaction_price_usd) as transaction_price_usd
+    from acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+),
+products as (
+    select
+        product_id,
+        product_name,
+        product_category
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+),
+customers as (
+    select distinct
+        customer_id,
+        customer_name,
+        country_code,
+        customer_email_address
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
+   where customer_email_address <> 'NOT_A_VALID_EMAIL@example.com' --Filter to remove invalid emails for Email Marketing
+   
+),
+countries as (
+    select distinct
+        country_code, country, region 
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
+   
+),
+merged as (
+    select customers.*,
+    orders.* exclude(customer_id),
+    
+    CASE
+  WHEN orders.transaction_price_usd BETWEEN 0 AND 1000 THEN '$0-1000'
+  WHEN orders.transaction_price_usd BETWEEN 1001 AND 5000 THEN '$1001-5000'
+  WHEN orders.transaction_price_usd > 5000 THEN '$5000+'
+  ELSE 'NOT LABELED'
+END AS customer_sales_band,
+
+  customer_sales_band,
+    products.* exclude(product_id),
+    countries.* exclude (country_code)
+    from customers left join orders using (customer_id)
+    left join products using (product_id) left join countries using (country_code)
+),
+final as(
+    select * from merged
+    where product_id IS NOT NULL
+)
+select * from final
+        );
+[0m23:11:16.326326 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:11:16.333328 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:11:16.334313 [debug] [Thread-3 (]: On model.acme_ecommerce.ecommerce__actuals_vs_forecasts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"} */
+create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__actuals_vs_forecasts
+         as
+        (with
+    orders as (
+        select
+
+            transaction_date_month,
+            transaction_month,
+            transaction_quarter,
+            transaction_year,
+            product_id,
+            sum(order_quantity) as order_quantity,
+            sum(transaction_price_usd) as actual_sales,
+            sum(transaction_price_usd) / sum(order_quantity) as sell_price_per_unit
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+        group by 1, 2, 3, 4, 5
+    ),
+    products as (
+        select product_id, product_name, product_category
+        from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+    ),
+    inventory as (
+        select distinct product_id, avg(purchase_price) as net_cost_per_unit
+        from
+           acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
+        group by 1
+
+    ),
+    forecasts as (
+        select forecast_date_month, product_id, forecast_sales, forecast_profit
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
+
+    ),
+    merged as (
+        select
+            orders.*,
+            products.* exclude(product_id),
+            inventory.* exclude(product_id),
+            forecasts.* exclude(forecast_date_month, product_id)
+
+        from orders
+        left join products using (product_id)
+        left join inventory using (product_id)
+        left join
+            forecasts
+            on orders.transaction_date_month = forecasts.forecast_date_month
+
+            and orders.product_id = forecasts.product_id
+
+    ),
+    actual_profit as (
+        select
+            *,
+            (actual_sales) - ((net_cost_per_unit) * (order_quantity)) as actual_profit
+
+        from merged
+    ),
+    final as (
+        select
+            *,
+            lag(actual_profit) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as actual_profit_last_month,
+            lag(forecast_profit) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as forecast_profit_last_month,
+            lag(actual_sales) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as actual_sales_last_month,
+
+            lag(forecast_sales) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as forecast_sales_last_month
+
+        from actual_profit
+
+    )
+select *
+from final
+        );
+[0m23:11:16.703894 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b2c00f-0000-cf1e-0000-0001827e6cb5
+[0m23:11:16.705884 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002025 (42S21): SQL compilation error:
+duplicate column name 'CUSTOMER_SALES_BAND'
+[0m23:11:16.709893 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.ecommerce__sales_by_customer (execute): 23:11:16.283274 => 23:11:16.707898
+[0m23:11:16.717888 [debug] [Thread-1 (]: Database Error in model ecommerce__sales_by_customer (models\marts\ecommerce__sales_by_customer.sql)
+  002025 (42S21): SQL compilation error:
+  duplicate column name 'CUSTOMER_SALES_BAND'
+  compiled Code at target\run\acme_ecommerce\models\marts\ecommerce__sales_by_customer.sql
+[0m23:11:16.720889 [error] [Thread-1 (]: 7 of 8 ERROR creating sql table model reference_data_marts.ecommerce__sales_by_customer  [[31mERROR[0m in 0.47s]
+[0m23:11:16.723149 [debug] [Thread-1 (]: Finished running node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:11:17.366555 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:11:17.377550 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.ecommerce__actuals_vs_forecasts (execute): 23:11:16.321287 => 23:11:17.376550
+[0m23:11:17.381529 [info ] [Thread-3 (]: 8 of 8 OK created sql table model reference_data_marts.ecommerce__actuals_vs_forecasts  [[32mSUCCESS 1[0m in 1.11s]
+[0m23:11:17.384803 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:11:17.390804 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:11:17.392804 [debug] [MainThread]: Connection 'list_acme_ecommerce' was left open.
+[0m23:11:17.393797 [debug] [MainThread]: On list_acme_ecommerce: Close
+[0m23:11:17.552919 [debug] [MainThread]: Connection 'list_acme_ecommerce' was left open.
+[0m23:11:17.553955 [debug] [MainThread]: On list_acme_ecommerce: Close
+[0m23:11:17.610172 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data_staging' was left open.
+[0m23:11:17.611169 [debug] [MainThread]: On list_acme_ecommerce_reference_data_staging: Close
+[0m23:11:17.701870 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data_marts' was left open.
+[0m23:11:17.704829 [debug] [MainThread]: On list_acme_ecommerce_reference_data_marts: Close
+[0m23:11:17.838950 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data' was left open.
+[0m23:11:17.841951 [debug] [MainThread]: On list_acme_ecommerce_reference_data: Close
+[0m23:11:18.018876 [debug] [MainThread]: Connection 'model.acme_ecommerce.ecommerce__sales_by_customer' was left open.
+[0m23:11:18.020876 [debug] [MainThread]: On model.acme_ecommerce.ecommerce__sales_by_customer: Close
+[0m23:11:18.127369 [debug] [MainThread]: Connection 'model.acme_ecommerce.stg_reference_data_src__countries' was left open.
+[0m23:11:18.127369 [debug] [MainThread]: On model.acme_ecommerce.stg_reference_data_src__countries: Close
+[0m23:11:18.244950 [debug] [MainThread]: Connection 'model.acme_ecommerce.ecommerce__actuals_vs_forecasts' was left open.
+[0m23:11:18.247952 [debug] [MainThread]: On model.acme_ecommerce.ecommerce__actuals_vs_forecasts: Close
+[0m23:11:18.400429 [debug] [MainThread]: Connection 'model.acme_ecommerce.stg_transactional_src__forecasts' was left open.
+[0m23:11:18.402427 [debug] [MainThread]: On model.acme_ecommerce.stg_transactional_src__forecasts: Close
+[0m23:11:18.474616 [info ] [MainThread]: 
+[0m23:11:18.479621 [info ] [MainThread]: Finished running 6 view models, 2 table models in 0 hours 0 minutes and 6.60 seconds (6.60s).
+[0m23:11:18.490170 [debug] [MainThread]: Command end result
+[0m23:11:18.525103 [info ] [MainThread]: 
+[0m23:11:18.527099 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m23:11:18.529100 [info ] [MainThread]: 
+[0m23:11:18.531099 [error] [MainThread]:   Database Error in model ecommerce__sales_by_customer (models\marts\ecommerce__sales_by_customer.sql)
+  002025 (42S21): SQL compilation error:
+  duplicate column name 'CUSTOMER_SALES_BAND'
+  compiled Code at target\run\acme_ecommerce\models\marts\ecommerce__sales_by_customer.sql
+[0m23:11:18.533142 [info ] [MainThread]: 
+[0m23:11:18.534118 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
+[0m23:11:18.536138 [debug] [MainThread]: Command `dbt run` failed at 23:11:18.536138 after 9.45 seconds
+[0m23:11:18.537138 [debug] [MainThread]: Flushing usage events
+
+
+============================== 23:12:00.589128 | 170cdb2e-a62e-4866-a6ce-d05ea112a8a7 ==============================
+[0m23:12:00.589128 [info ] [MainThread]: Running with dbt=1.7.9
+[0m23:12:00.594125 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\luism\\Desktop\\data\\github_repos\\sliide', 'log_path': 'C:\\Users\\luism\\Desktop\\data\\github_repos\\sliide\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m23:12:02.260516 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m23:12:02.293549 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m23:12:02.572518 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m23:12:02.573516 [debug] [MainThread]: Partial parsing: updated file: acme_ecommerce://models\marts\ecommerce__sales_by_customer.sql
+[0m23:12:02.574517 [debug] [MainThread]: Partial parsing: updated file: acme_ecommerce://macros\label_ecommerce__sales_by_customer.sql
+[0m23:12:03.260517 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.acme_ecommerce.intermediate
+[0m23:12:03.294490 [info ] [MainThread]: Found 8 models, 8 seeds, 3 tests, 7 sources, 1 exposure, 0 metrics, 811 macros, 0 groups, 0 semantic models
+[0m23:12:03.297531 [info ] [MainThread]: 
+[0m23:12:03.299494 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:12:03.302531 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce'
+[0m23:12:03.320530 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce"
+[0m23:12:03.321528 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce'
+[0m23:12:03.322529 [debug] [ThreadPool]: On list_acme_ecommerce: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce"} */
+show terse schemas in database acme_ecommerce
+    limit 10000
+[0m23:12:03.328495 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce"
+[0m23:12:03.329494 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:12:03.331494 [debug] [ThreadPool]: On list_acme_ecommerce: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce"} */
+show terse schemas in database acme_ecommerce
+    limit 10000
+[0m23:12:03.334497 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:12:04.643649 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.0 seconds
+[0m23:12:04.669253 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.0 seconds
+[0m23:12:04.687317 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data_staging'
+[0m23:12:04.692252 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data'
+[0m23:12:04.709788 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_acme_ecommerce_reference_data_marts'
+[0m23:12:04.721745 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data_staging"
+[0m23:12:04.729744 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data"
+[0m23:12:04.737462 [debug] [ThreadPool]: Using snowflake connection "list_acme_ecommerce_reference_data_marts"
+[0m23:12:04.738026 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data_staging: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data_staging"} */
+show terse objects in acme_ecommerce.reference_data_staging limit 10000
+[0m23:12:04.739041 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data"} */
+show terse objects in acme_ecommerce.reference_data limit 10000
+[0m23:12:04.740039 [debug] [ThreadPool]: On list_acme_ecommerce_reference_data_marts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "connection_name": "list_acme_ecommerce_reference_data_marts"} */
+show terse objects in acme_ecommerce.reference_data_marts limit 10000
+[0m23:12:04.741124 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:12:04.741964 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:12:04.743004 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:12:05.750151 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m23:12:05.850749 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:05.877908 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.0 seconds
+[0m23:12:05.893836 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m23:12:05.896835 [info ] [MainThread]: 
+[0m23:12:05.910461 [debug] [Thread-1 (]: Began running node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:12:05.911460 [debug] [Thread-2 (]: Began running node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:12:05.912465 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:12:05.914464 [debug] [Thread-4 (]: Began running node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:12:05.915467 [info ] [Thread-1 (]: 1 of 8 START sql view model reference_data_staging.stg_product_inventory_src__product_inventories  [RUN]
+[0m23:12:05.917462 [info ] [Thread-2 (]: 2 of 8 START sql view model reference_data_staging.stg_reference_data_src__countries  [RUN]
+[0m23:12:05.919466 [info ] [Thread-3 (]: 3 of 8 START sql view model reference_data_staging.stg_reference_data_src__customers  [RUN]
+[0m23:12:05.925464 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_product_inventory_src__product_inventories'
+[0m23:12:05.922464 [info ] [Thread-4 (]: 4 of 8 START sql view model reference_data_staging.stg_reference_data_src__products  [RUN]
+[0m23:12:05.928504 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__countries'
+[0m23:12:05.931460 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__customers'
+[0m23:12:05.932465 [debug] [Thread-1 (]: Began compiling node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:12:05.935133 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.acme_ecommerce.stg_reference_data_src__products'
+[0m23:12:05.936132 [debug] [Thread-2 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:12:05.938175 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:12:05.957135 [debug] [Thread-1 (]: Writing injected SQL for node "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:12:05.959135 [debug] [Thread-4 (]: Began compiling node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:12:05.967138 [debug] [Thread-2 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:12:05.972368 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:12:05.980407 [debug] [Thread-4 (]: Writing injected SQL for node "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:12:05.981371 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.stg_product_inventory_src__product_inventories (compile): 23:12:05.939146 => 23:12:05.981371
+[0m23:12:05.982367 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__countries (compile): 23:12:05.960174 => 23:12:05.982367
+[0m23:12:05.984367 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__products (compile): 23:12:05.974376 => 23:12:05.984367
+[0m23:12:05.985370 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__customers (compile): 23:12:05.968356 => 23:12:05.985370
+[0m23:12:05.986368 [debug] [Thread-1 (]: Began executing node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:12:05.986368 [debug] [Thread-2 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:12:05.987406 [debug] [Thread-4 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:12:05.988406 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:12:06.092404 [debug] [Thread-1 (]: Writing runtime sql for node "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:12:06.096404 [debug] [Thread-2 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:12:06.102395 [debug] [Thread-4 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:12:06.107366 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:12:06.110101 [debug] [Thread-1 (]: Using snowflake connection "model.acme_ecommerce.stg_product_inventory_src__product_inventories"
+[0m23:12:06.111100 [debug] [Thread-2 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__countries"
+[0m23:12:06.113101 [debug] [Thread-1 (]: On model.acme_ecommerce.stg_product_inventory_src__product_inventories: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_product_inventory_src__product_inventories"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.product_inventories.inventory),
+    final as (
+        select
+            prod_id as product_id,
+            to_variant(to_date(stock_arrival_date, 'MM/DD/YY'))::date
+            as stock_arrival_date,
+            to_variant(to_date(stock_depleted_date, 'MM/DD/YY'))::date
+            as stock_depleted_date,
+            purchase_price
+
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:12:06.114109 [debug] [Thread-4 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__products"
+[0m23:12:06.115172 [debug] [Thread-2 (]: On model.acme_ecommerce.stg_reference_data_src__countries: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__countries"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.countries),
+    final as (select ALPHA_2_COUNTRY_CODE as country_code, country, region from source where active_flag = true)
+
+select *
+from final
+  );
+[0m23:12:06.116334 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.stg_reference_data_src__customers"
+[0m23:12:06.117651 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:12:06.118567 [debug] [Thread-4 (]: On model.acme_ecommerce.stg_reference_data_src__products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__products"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.products),
+    final as (
+        select prod_id as product_id, prod_name as product_name, prod_cat as product_category from source
+    )
+
+select *
+from final
+  );
+[0m23:12:06.119605 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:12:06.120627 [debug] [Thread-3 (]: On model.acme_ecommerce.stg_reference_data_src__customers: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_reference_data_src__customers"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.customers),
+    final as (
+        select
+            customer_code as customer_id ,
+            first_name as customer_first_name  ,
+            last_name as customer_last_name,
+            concat(first_name, ' ', last_name) as customer_name,
+            case
+                when
+                    regexp_like(
+                        email, '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                    )
+                then email
+                else 'NOT_A_VALID_EMAIL@example.com'  --all invalid email formats renamed to this one
+            end as customer_email_address,
+            country_id as country_code
+
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:12:06.123578 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:12:06.126616 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:12:07.311144 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:07.362104 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__customers (execute): 23:12:06.102395 => 23:12:07.361104
+[0m23:12:07.363079 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:07.365104 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:07.366080 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:07.370104 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__countries (execute): 23:12:06.092404 => 23:12:07.370104
+[0m23:12:07.367104 [info ] [Thread-3 (]: 3 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__customers  [[32mSUCCESS 1[0m in 1.44s]
+[0m23:12:07.373995 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.stg_product_inventory_src__product_inventories (execute): 23:12:05.989369 => 23:12:07.373995
+[0m23:12:07.377199 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.stg_reference_data_src__products (execute): 23:12:06.097404 => 23:12:07.377199
+[0m23:12:07.380886 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__customers
+[0m23:12:07.378552 [info ] [Thread-2 (]: 2 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__countries  [[32mSUCCESS 1[0m in 1.45s]
+[0m23:12:07.382888 [info ] [Thread-1 (]: 1 of 8 OK created sql view model reference_data_staging.stg_product_inventory_src__product_inventories  [[32mSUCCESS 1[0m in 1.46s]
+[0m23:12:07.385884 [debug] [Thread-3 (]: Began running node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:12:07.384920 [info ] [Thread-4 (]: 4 of 8 OK created sql view model reference_data_staging.stg_reference_data_src__products  [[32mSUCCESS 1[0m in 1.45s]
+[0m23:12:07.388924 [debug] [Thread-2 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__countries
+[0m23:12:07.390891 [debug] [Thread-1 (]: Finished running node model.acme_ecommerce.stg_product_inventory_src__product_inventories
+[0m23:12:07.394898 [debug] [Thread-4 (]: Finished running node model.acme_ecommerce.stg_reference_data_src__products
+[0m23:12:07.392885 [info ] [Thread-3 (]: 5 of 8 START sql view model reference_data_staging.stg_transactional_src__forecasts  [RUN]
+[0m23:12:07.395885 [debug] [Thread-2 (]: Began running node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:12:07.398921 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__customers, now model.acme_ecommerce.stg_transactional_src__forecasts)
+[0m23:12:07.400970 [debug] [Thread-3 (]: Began compiling node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:12:07.399931 [info ] [Thread-2 (]: 6 of 8 START sql view model reference_data_staging.stg_transactional_src__orders  [RUN]
+[0m23:12:07.407937 [debug] [Thread-3 (]: Writing injected SQL for node "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:12:07.409937 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__countries, now model.acme_ecommerce.stg_transactional_src__orders)
+[0m23:12:07.410935 [debug] [Thread-2 (]: Began compiling node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:12:07.412934 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_transactional_src__forecasts (compile): 23:12:07.402943 => 23:12:07.411934
+[0m23:12:07.418931 [debug] [Thread-2 (]: Writing injected SQL for node "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:12:07.419968 [debug] [Thread-3 (]: Began executing node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:12:07.426369 [debug] [Thread-3 (]: Writing runtime sql for node "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:12:07.428353 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_transactional_src__orders (compile): 23:12:07.413933 => 23:12:07.427330
+[0m23:12:07.429335 [debug] [Thread-2 (]: Began executing node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:12:07.434330 [debug] [Thread-2 (]: Writing runtime sql for node "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:12:07.436370 [debug] [Thread-3 (]: Using snowflake connection "model.acme_ecommerce.stg_transactional_src__forecasts"
+[0m23:12:07.437329 [debug] [Thread-3 (]: On model.acme_ecommerce.stg_transactional_src__forecasts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_transactional_src__forecasts"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
+  
+   as (
+    with
+    source as (select * from acme_ecommerce.reference_data.forecasts),
+    final as (
+        select
+            date_part(month, to_date(month, 'MM-YY')) as forecast_month,
+            date_part(year, to_date(month, 'MM-YY')) as forecast_year,
+            cast(TO_CHAR(TO_DATE(month, 'MM-YY'), 'YYYY-MM-DD') as date) AS forecast_date_month,
+            product as product_id,
+            forecast_sales,
+            forecast_profit
+        from source
+    )
+
+select *
+from final
+  );
+[0m23:12:07.440331 [debug] [Thread-2 (]: Using snowflake connection "model.acme_ecommerce.stg_transactional_src__orders"
+[0m23:12:07.443355 [debug] [Thread-2 (]: On model.acme_ecommerce.stg_transactional_src__orders: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.stg_transactional_src__orders"} */
+create or replace   view acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+  
+   as (
+    with
+    source1 as (select * from acme_ecommerce.transactional.orders_2024_q3),
+    source2 as (select * from acme_ecommerce.transactional.orders_2024_q3),
+    merged as (select * from source1 union all select * from source2),
+    final as (
+        select
+            transaction_date,
+            DATE_TRUNC('MONTH', transaction_date)  as transaction_date_month,
+            month(transaction_date) as transaction_month,
+            quarter(transaction_date) as transaction_quarter,
+            year(transaction_date) as transaction_year,
+            shipping_date as shipped_date,
+            month(shipping_date) as shipped_month,
+            quarter(shipping_date) as shipped_quarter,
+            year(shipping_date) as shipped_year,
+            transaction_id,
+            product_id,
+            customer_id,
+            quantity as order_quantity,
+            transaction_price_usd
+        from merged
+    )
+
+select *
+from final
+  );
+[0m23:12:07.646686 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:12:07.652682 [debug] [Thread-3 (]: Timing info for model.acme_ecommerce.stg_transactional_src__forecasts (execute): 23:12:07.421319 => 23:12:07.651646
+[0m23:12:07.654683 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m23:12:07.662682 [debug] [Thread-2 (]: Timing info for model.acme_ecommerce.stg_transactional_src__orders (execute): 23:12:07.430336 => 23:12:07.661682
+[0m23:12:07.657682 [info ] [Thread-3 (]: 5 of 8 OK created sql view model reference_data_staging.stg_transactional_src__forecasts  [[32mSUCCESS 1[0m in 0.26s]
+[0m23:12:07.666645 [debug] [Thread-3 (]: Finished running node model.acme_ecommerce.stg_transactional_src__forecasts
+[0m23:12:07.664684 [info ] [Thread-2 (]: 6 of 8 OK created sql view model reference_data_staging.stg_transactional_src__orders  [[32mSUCCESS 1[0m in 0.26s]
+[0m23:12:07.669685 [debug] [Thread-2 (]: Finished running node model.acme_ecommerce.stg_transactional_src__orders
+[0m23:12:07.672682 [debug] [Thread-1 (]: Began running node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:12:07.673644 [debug] [Thread-4 (]: Began running node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:12:07.676687 [info ] [Thread-1 (]: 7 of 8 START sql table model reference_data_marts.ecommerce__actuals_vs_forecasts  [RUN]
+[0m23:12:07.679685 [info ] [Thread-4 (]: 8 of 8 START sql table model reference_data_marts.ecommerce__sales_by_customer . [RUN]
+[0m23:12:07.681685 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_product_inventory_src__product_inventories, now model.acme_ecommerce.ecommerce__actuals_vs_forecasts)
+[0m23:12:07.683650 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.acme_ecommerce.stg_reference_data_src__products, now model.acme_ecommerce.ecommerce__sales_by_customer)
+[0m23:12:07.685646 [debug] [Thread-1 (]: Began compiling node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:12:07.686644 [debug] [Thread-4 (]: Began compiling node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:12:07.696644 [debug] [Thread-1 (]: Writing injected SQL for node "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:12:07.709645 [debug] [Thread-4 (]: Writing injected SQL for node "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:12:07.712649 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.ecommerce__actuals_vs_forecasts (compile): 23:12:07.687683 => 23:12:07.711651
+[0m23:12:07.714650 [debug] [Thread-1 (]: Began executing node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:12:07.715644 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.ecommerce__sales_by_customer (compile): 23:12:07.697683 => 23:12:07.715644
+[0m23:12:07.761683 [debug] [Thread-4 (]: Began executing node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:12:07.762645 [debug] [Thread-1 (]: Writing runtime sql for node "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:12:07.769644 [debug] [Thread-4 (]: Writing runtime sql for node "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:12:07.774183 [debug] [Thread-1 (]: Using snowflake connection "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"
+[0m23:12:07.777221 [debug] [Thread-4 (]: Using snowflake connection "model.acme_ecommerce.ecommerce__sales_by_customer"
+[0m23:12:07.778527 [debug] [Thread-1 (]: On model.acme_ecommerce.ecommerce__actuals_vs_forecasts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.ecommerce__actuals_vs_forecasts"} */
+create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__actuals_vs_forecasts
+         as
+        (with
+    orders as (
+        select
+
+            transaction_date_month,
+            transaction_month,
+            transaction_quarter,
+            transaction_year,
+            product_id,
+            sum(order_quantity) as order_quantity,
+            sum(transaction_price_usd) as actual_sales,
+            sum(transaction_price_usd) / sum(order_quantity) as sell_price_per_unit
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+        group by 1, 2, 3, 4, 5
+    ),
+    products as (
+        select product_id, product_name, product_category
+        from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+    ),
+    inventory as (
+        select distinct product_id, avg(purchase_price) as net_cost_per_unit
+        from
+           acme_ecommerce.reference_data_staging.stg_product_inventory_src__product_inventories
+        group by 1
+
+    ),
+    forecasts as (
+        select forecast_date_month, product_id, forecast_sales, forecast_profit
+        from  acme_ecommerce.reference_data_staging.stg_transactional_src__forecasts
+
+    ),
+    merged as (
+        select
+            orders.*,
+            products.* exclude(product_id),
+            inventory.* exclude(product_id),
+            forecasts.* exclude(forecast_date_month, product_id)
+
+        from orders
+        left join products using (product_id)
+        left join inventory using (product_id)
+        left join
+            forecasts
+            on orders.transaction_date_month = forecasts.forecast_date_month
+
+            and orders.product_id = forecasts.product_id
+
+    ),
+    actual_profit as (
+        select
+            *,
+            (actual_sales) - ((net_cost_per_unit) * (order_quantity)) as actual_profit
+
+        from merged
+    ),
+    final as (
+        select
+            *,
+            lag(actual_profit) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as actual_profit_last_month,
+            lag(forecast_profit) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as forecast_profit_last_month,
+            lag(actual_sales) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as actual_sales_last_month,
+
+            lag(forecast_sales) over (
+                partition by transaction_date_month, product_id
+                order by transaction_date_month asc
+            ) as forecast_sales_last_month
+
+        from actual_profit
+
+    )
+select *
+from final
+        );
+[0m23:12:07.779436 [debug] [Thread-4 (]: On model.acme_ecommerce.ecommerce__sales_by_customer: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "default", "target_name": "prod", "node_id": "model.acme_ecommerce.ecommerce__sales_by_customer"} */
+create or replace transient table acme_ecommerce.reference_data_marts.ecommerce__sales_by_customer
+         as
+        (with orders as (
+    select
+        transaction_date,
+        transaction_month,
+        transaction_quarter,
+        transaction_year,
+        shipped_date,
+        shipped_month,
+        shipped_quarter,
+        shipped_year,
+        customer_id,
+        product_id,
+        sum(order_quantity) as order_quantity,
+        sum(transaction_price_usd) as transaction_price_usd
+    from acme_ecommerce.reference_data_staging.stg_transactional_src__orders
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+),
+products as (
+    select
+        product_id,
+        product_name,
+        product_category
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__products
+),
+customers as (
+    select distinct
+        customer_id,
+        customer_name,
+        country_code,
+        customer_email_address
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__customers
+   where customer_email_address <> 'NOT_A_VALID_EMAIL@example.com' --Filter to remove invalid emails for Email Marketing
+   
+),
+countries as (
+    select distinct
+        country_code, country, region 
+    from acme_ecommerce.reference_data_staging.stg_reference_data_src__countries
+   
+),
+merged as (
+    select customers.*,
+    orders.* exclude(customer_id),
+    
+    CASE
+  WHEN orders.transaction_price_usd BETWEEN 0 AND 1000 THEN '$0-1000'
+  WHEN orders.transaction_price_usd BETWEEN 1001 AND 5000 THEN '$1001-5000'
+  WHEN orders.transaction_price_usd > 5000 THEN '$5000+'
+  ELSE 'NOT LABELED'
+END
+
+  as customer_sales_band,
+    products.* exclude(product_id),
+    countries.* exclude (country_code)
+    from customers left join orders using (customer_id)
+    left join products using (product_id) left join countries using (country_code)
+),
+final as(
+    select * from merged
+    where product_id IS NOT NULL
+)
+select * from final
+        );
+[0m23:12:09.186018 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:09.190019 [debug] [Thread-4 (]: Timing info for model.acme_ecommerce.ecommerce__sales_by_customer (execute): 23:12:07.763646 => 23:12:09.190019
+[0m23:12:09.192018 [info ] [Thread-4 (]: 8 of 8 OK created sql table model reference_data_marts.ecommerce__sales_by_customer  [[32mSUCCESS 1[0m in 1.51s]
+[0m23:12:09.194019 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m23:12:09.195048 [debug] [Thread-4 (]: Finished running node model.acme_ecommerce.ecommerce__sales_by_customer
+[0m23:12:09.199047 [debug] [Thread-1 (]: Timing info for model.acme_ecommerce.ecommerce__actuals_vs_forecasts (execute): 23:12:07.716648 => 23:12:09.198049
+[0m23:12:09.200017 [info ] [Thread-1 (]: 7 of 8 OK created sql table model reference_data_marts.ecommerce__actuals_vs_forecasts  [[32mSUCCESS 1[0m in 1.52s]
+[0m23:12:09.203047 [debug] [Thread-1 (]: Finished running node model.acme_ecommerce.ecommerce__actuals_vs_forecasts
+[0m23:12:09.206021 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:12:09.208022 [debug] [MainThread]: Connection 'list_acme_ecommerce' was left open.
+[0m23:12:09.209020 [debug] [MainThread]: On list_acme_ecommerce: Close
+[0m23:12:09.313027 [debug] [MainThread]: Connection 'list_acme_ecommerce' was left open.
+[0m23:12:09.314029 [debug] [MainThread]: On list_acme_ecommerce: Close
+[0m23:12:09.388730 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data_staging' was left open.
+[0m23:12:09.391672 [debug] [MainThread]: On list_acme_ecommerce_reference_data_staging: Close
+[0m23:12:09.648901 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data' was left open.
+[0m23:12:09.651909 [debug] [MainThread]: On list_acme_ecommerce_reference_data: Close
+[0m23:12:09.727116 [debug] [MainThread]: Connection 'list_acme_ecommerce_reference_data_marts' was left open.
+[0m23:12:09.729115 [debug] [MainThread]: On list_acme_ecommerce_reference_data_marts: Close
+[0m23:12:09.811666 [debug] [MainThread]: Connection 'model.acme_ecommerce.ecommerce__actuals_vs_forecasts' was left open.
+[0m23:12:09.812704 [debug] [MainThread]: On model.acme_ecommerce.ecommerce__actuals_vs_forecasts: Close
+[0m23:12:09.909926 [debug] [MainThread]: Connection 'model.acme_ecommerce.stg_transactional_src__orders' was left open.
+[0m23:12:09.912924 [debug] [MainThread]: On model.acme_ecommerce.stg_transactional_src__orders: Close
+[0m23:12:10.149109 [debug] [MainThread]: Connection 'model.acme_ecommerce.stg_transactional_src__forecasts' was left open.
+[0m23:12:10.152125 [debug] [MainThread]: On model.acme_ecommerce.stg_transactional_src__forecasts: Close
+[0m23:12:10.244125 [debug] [MainThread]: Connection 'model.acme_ecommerce.ecommerce__sales_by_customer' was left open.
+[0m23:12:10.246130 [debug] [MainThread]: On model.acme_ecommerce.ecommerce__sales_by_customer: Close
+[0m23:12:10.317874 [info ] [MainThread]: 
+[0m23:12:10.321860 [info ] [MainThread]: Finished running 6 view models, 2 table models in 0 hours 0 minutes and 7.02 seconds (7.02s).
+[0m23:12:10.334803 [debug] [MainThread]: Command end result
+[0m23:12:10.376789 [info ] [MainThread]: 
+[0m23:12:10.378781 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:12:10.379782 [info ] [MainThread]: 
+[0m23:12:10.381782 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m23:12:10.383821 [debug] [MainThread]: Command `dbt run` succeeded at 23:12:10.383821 after 9.91 seconds
+[0m23:12:10.384820 [debug] [MainThread]: Flushing usage events
