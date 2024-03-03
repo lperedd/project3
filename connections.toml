@@ -1,0 +1,7 @@
+[myconnection]
+account = "pajfrmr-fd96872"
+user = "ANALYTICS_USER"
+password = "Infosum8-8"
+warehouse = "compute_wh"
+database = "acme_ecommerce"
+schema = "operations"

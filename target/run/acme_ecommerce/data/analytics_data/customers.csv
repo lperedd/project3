@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "ANALYTICS"."ANALYTICS_USER"."CUSTOMERS";
+    -- dbt seed --
+    
+            insert into analytics.ANALYTICS_USER.customers (customer_code, first_name, last_name, email, country_id) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+        
+
+;
+  

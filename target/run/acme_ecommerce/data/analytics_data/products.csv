@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "ANALYTICS"."ANALYTICS_USER"."PRODUCTS";
+    -- dbt seed --
+    
+            insert into analytics.ANALYTICS_USER.products (prod_id, prod_name, prod_cat) values
+            (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
+        
+
+;
+  

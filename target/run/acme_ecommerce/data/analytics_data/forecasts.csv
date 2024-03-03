@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "ANALYTICS"."ANALYTICS_USER"."FORECASTS";
+    -- dbt seed --
+    
+            insert into analytics.ANALYTICS_USER.forecasts (month, product, forecast_sales, forecast_profit) values
+            (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+        
+
+;
+  

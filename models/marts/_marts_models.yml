@@ -1,0 +1,152 @@
+version: 2
+
+models:
+  - name: source_name
+    description: |
+      This dbt project contains models related to ecommerce data.
+      It includes transformations for comparing actuals vs forecasts and sales by customer.
+
+  # Ecommerce Actuals vs Forecasts Model
+  - name: ecommerce__actuals_vs_forecasts
+    description: |
+      This model compares actuals vs forecasts for ecommerce transactions.
+      It includes columns like product_id, transaction_date_month, order_quantity, actual_sales, sell_price_per_unit, etc.
+    columns:
+      - name: product_id
+        description: The unique identifier for each product.
+      - name: transaction_date_month
+        description: The month of the transaction.
+
+      - name: transaction_month
+        description: The month of the transaction in numeric format.
+
+      - name: transaction_quarter
+        description: The quarter of the transaction.
+
+      - name: transaction_year
+        description: The year of the transaction.
+
+      - name: order_quantity
+        description: The quantity of products ordered in a transaction.
+
+      - name: actual_sales
+        description: The actual sales amount in USD.
+
+      - name: sell_price_per_unit
+        description: The selling price per unit of the product.
+
+      - name: product_name
+        description: The name of the product.
+
+      - name: product_category
+        description: The category to which the product belongs.
+
+      - name: net_cost_per_unit
+        description: The net cost per unit of the product.
+
+      - name: forecast_sales
+        description: The forecasted sales amount in USD.
+
+      - name: forecast_profit
+        description: The forecasted profit amount in USD.
+
+      - name: actual_profit
+        description: The actual profit amount in USD.
+
+      - name: actual_profit_last_month
+        description: The actual profit amount in USD for the last month.
+
+      - name: forecast_profit_last_month
+        description: The forecasted profit amount in USD for the last month.
+
+      - name: actual_sales_last_month
+        description: The actual sales amount in USD for the last month.
+
+      - name: forecast_sales_last_month
+        description: The forecasted sales amount in USD for the last month.
+
+    # Exposures and tests below
+    exposures:
+      - name: product_sales_exposure
+        description: |
+          Exposes information on product sales including product_id, order_quantity, actual_sales, and sell_price_per_unit.
+      - name: profit_exposure
+        description: |
+          Exposes information on profit, including actual_profit, forecast_profit, actual_profit_last_month, and forecast_profit_last_month.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - product_id
+            - transaction_date_month
+          severity: error
+
+# Ecommerce Sales by Customer Model
+  - name: ecommerce__sales_by_customer
+    description: |
+      This model aggregates ecommerce sales data by customer.
+      It includes columns like country_code, customer_id, transaction_date, order_quantity, transaction_price_usd, etc.
+
+    columns:
+      - name: country_code
+        description: The code representing the country of the customer.
+
+      - name: customer_id
+        description: The unique identifier for each customer.
+        tests:
+          - not_null
+      - name: customer_name
+        description: The name of the customer.
+
+      - name: customer_email_address
+        description: The email address of the customer.
+
+      - name: product_id
+        description: The unique identifier for each product.
+
+      - name: transaction_date
+        description: The date of the transaction.
+
+      - name: transaction_month
+        description: The month of the transaction.
+
+      - name: transaction_quarter
+        description: The quarter of the transaction.
+
+      - name: transaction_year
+        description: The year of the transaction.
+
+      - name: shipped_date
+        description: The date on which the products were shipped.
+
+      - name: shipped_month
+        description: The month in which the products were shipped.
+
+      - name: shipped_quarter
+        description: The quarter in which the products were shipped.
+
+      - name: shipped_yeacs 
+        description: The year in which the products were shipped.
+
+      - name: order_quantity
+        description: The quantity of products ordered in a transaction.
+
+      - name: transaction_price_usd
+        description: The total transaction price in USD.
+
+      - name: product_name
+        description: The name of the product.
+
+      - name: product_category
+        description: The category to which the product belongs.
+
+      - name: country
+        description: The country where the customer is located.
+
+      - name: region
+        description: The region where the customer is located.
+
+    exposures:
+      - name: customer_sales_exposure
+        description: |
+          Exposes information on customer sales, including customer_id, order_quantity, transaction_price_usd, and product_name.
+

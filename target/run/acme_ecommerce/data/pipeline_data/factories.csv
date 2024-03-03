@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "ANALYTICS"."ANALYTICS_USER"."FACTORIES";
+    -- dbt seed --
+    
+            insert into analytics.ANALYTICS_USER.factories (factory_id, location_id , size , number_of_employees,  in_use) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+        
+
+;
+  

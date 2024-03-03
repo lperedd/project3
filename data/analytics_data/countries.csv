@@ -1,0 +1,249 @@
+alpha_2_country_code,country,region,active_flag
+ad,Andorra,EMEA,TRUE
+ae,United Arab Emirates,EMEA,TRUE
+af,Afghanistan,EMEA,TRUE
+ag,Antigua and Barbuda,LATAM,TRUE
+ai,Anguilla,LATAM,TRUE
+al,Albania,EMEA,TRUE
+am,Armenia,EMEA,TRUE
+ao,Angola,EMEA,TRUE
+aq,Antarctica,EMEA,TRUE
+ar,Argentina,LATAM,TRUE
+as,American Samoa,APAC,TRUE
+at,Austria,EMEA,TRUE
+au,Australia,APAC,TRUE
+aw,Aruba,LATAM,TRUE
+ax,Åland Islands,EMEA,TRUE
+az,Azerbaijan,EMEA,TRUE
+ba,Bosnia and Herzegovina,EMEA,TRUE
+bb,Barbados,LATAM,TRUE
+bd,Bangladesh,APAC,TRUE
+be,Belgium,EMEA,TRUE
+bf,Burkina Faso,EMEA,TRUE
+bg,Bulgaria,EMEA,TRUE
+bh,Bahrain,EMEA,TRUE
+bi,Burundi,EMEA,TRUE
+bj,Benin,EMEA,TRUE
+bl,Saint Barthélemy,EMEA,TRUE
+bm,Bermuda,LATAM,TRUE
+bn,Brunei Darussalam,APAC,TRUE
+bo,"Bolivia, Plurinational State of",LATAM,TRUE
+br,Brazil,LATAM,TRUE
+bs,Bahamas,LATAM,TRUE
+bt,Bhutan,APAC,TRUE
+bv,Bouvet Island,EMEA,TRUE
+bw,Botswana,EMEA,TRUE
+by,Belarus,EMEA,TRUE
+bz,Belize,LATAM,TRUE
+ca,Canada,NA,TRUE
+cc,Cocos (Keeling) Islands,APAC,TRUE
+cc,Cocos Islands,APAC,FALSE
+cd,"Congo, the Democratic Republic of the",EMEA,TRUE
+cf,Central African Republic,EMEA,TRUE
+cg,Congo,EMEA,TRUE
+ch,Switzerland,EMEA,TRUE
+ci,Côte d'Ivoire,EMEA,TRUE
+ck,Cook Islands,EMEA,TRUE
+cl,Chile,LATAM,TRUE
+cm,Cameroon,EMEA,TRUE
+cn,China,APAC,TRUE
+co,Colombia,LATAM,TRUE
+cr,Costa Rica,LATAM,TRUE
+cu,Cuba,LATAM,TRUE
+cv,Cabo Verde,EMEA,TRUE
+cw,Curaçao,EMEA,TRUE
+cx,Christmas Island,APAC,TRUE
+cy,Cyprus,EMEA,TRUE
+cz,Czechia,EMEA,TRUE
+de,Germany,EMEA,TRUE
+dj,Djibouti,EMEA,TRUE
+dk,Denmark,EMEA,TRUE
+dm,Dominica,LATAM,TRUE
+do,Dominican Republic,LATAM,TRUE
+dz,Algeria,EMEA,TRUE
+ec,Ecuador,LATAM,TRUE
+ee,Estonia,EMEA,TRUE
+eg,Egypt,EMEA,TRUE
+eh,Western Sahara,EMEA,TRUE
+er,Eritrea,EMEA,TRUE
+es,Spain,EMEA,TRUE
+et,Ethiopia,EMEA,TRUE
+fi,Finland,EMEA,TRUE
+fj,Fiji,APAC,TRUE
+fk,Falkland Islands (Malvinas),LATAM,TRUE
+fm,"Micronesia, Federated States of",APAC,TRUE
+fo,Faroe Islands,EMEA,TRUE
+fr,France,EMEA,TRUE
+ga,Gabon,EMEA,TRUE
+gb,United Kingdom of Great Britain and Northern Island,EMEA,TRUE
+gd,Grenada,LATAM,TRUE
+ge,Georgia,EMEA,TRUE
+gf,French Guiana,EMEA,TRUE
+gg,Guernsey,EMEA,TRUE
+gh,Ghana,EMEA,TRUE
+gi,Gibralta,EMEA,TRUE
+gl,Greenland,EMEA,TRUE
+gm,Gambia,EMEA,TRUE
+gn,Guinea,EMEA,TRUE
+gp,Guadeloupe,EMEA,TRUE
+gq,Equatorial Guinea,EMEA,TRUE
+gr,Greece,EMEA,TRUE
+gs,South Georgia and the South Sandwich Islands,LATAM,TRUE
+gt,Guatemala,LATAM,TRUE
+gu,Guam,APAC,TRUE
+gw,Guinea-Bissau,EMEA,TRUE
+gy,Guyana,LATAM,TRUE
+hk,Hong Kong,APAC,TRUE
+hm,Heard Island and McDonald Islands,EMEA,TRUE
+hn,Honduras,LATAM,TRUE
+hr,Croatia,EMEA,TRUE
+ht,Haiti,LATAM,TRUE
+hu,Hungary,EMEA,TRUE
+id,Indonesia,APAC,TRUE
+ie,Ireland,EMEA,TRUE
+il,Israel,EMEA,TRUE
+im,Isle of Man,EMEA,TRUE
+in,India,APAC,TRUE
+io,British Indian Ocean Territory,APAC,TRUE
+iq,Iraq,EMEA,TRUE
+ir,"Iran, Islamic Republic of",EMEA,TRUE
+is,Iceland,EMEA,TRUE
+it,Italy,EMEA,TRUE
+je,Jersey,EMEA,TRUE
+jm,Jamaica,LATAM,TRUE
+jo,Jordan,EMEA,TRUE
+jp,Japan,APAC,TRUE
+ke,Kenya,EMEA,TRUE
+kg,Kyrgyzstan,EMEA,TRUE
+kh,Cambodia,APAC,TRUE
+ki,Kiribati,APAC,TRUE
+km,Comoros,EMEA,TRUE
+kn,Saint Kitts and Nevis,LATAM,TRUE
+kp,"Korea, Democratic People's Republic of",APAC,TRUE
+kr,"Korea, Republic of",APAC,TRUE
+kw,Kuwait,EMEA,TRUE
+ky,Cayman Islands,LATAM,TRUE
+kz,Kazakhstan,EMEA,TRUE
+la,Lao People's Democratic Republic,APAC,TRUE
+lb,Lebanon,EMEA,TRUE
+lc,Saint Lucia,LATAM,TRUE
+li,Liechtenstein,EMEA,TRUE
+lk,Sri Lanka,APAC,TRUE
+lr,Liberia,EMEA,TRUE
+ls,Lesotho,EMEA,TRUE
+lt,Lithuania,EMEA,TRUE
+lu,Luxembourg,EMEA,TRUE
+lv,Latvia,EMEA,TRUE
+ly,Libya,EMEA,TRUE
+ma,Morocco,EMEA,TRUE
+mc,Monaco,EMEA,TRUE
+md,"Moldova, Republic of",EMEA,TRUE
+me,Montenegro,EMEA,TRUE
+mf,Collectivity of Saint Martin,EMEA,TRUE
+mg,Madagascar,EMEA,TRUE
+mh,Marshall Islands,APAC,TRUE
+mk,"Macedonia, the former Yugoslav Republic of",EMEA,TRUE
+ml,Mali,EMEA,TRUE
+mm,Myanmar,APAC,TRUE
+mn,Mongolia,APAC,TRUE
+mo,Macao,APAC,TRUE
+mp,Northern Mariana Islands,APAC,TRUE
+mq,Martinique,EMEA,TRUE
+mr,Mauritania,EMEA,TRUE
+ms,Montserrat,LATAM,TRUE
+mt,Malta,EMEA,TRUE
+mu,Mauritius,EMEA,TRUE
+mv,Maldives,APAC,TRUE
+mw,Malawi,EMEA,TRUE
+mx,Mexico,LATAM,TRUE
+my,Malaysia,APAC,TRUE
+mz,Mozambique,EMEA,TRUE
+na,Namibia,EMEA,TRUE
+nc,New Caledonia,EMEA,TRUE
+ne,Niger,EMEA,TRUE
+nf,Norfolk Island,APAC,TRUE
+ng,Nigeria,EMEA,TRUE
+ni,Nicaragua,LATAM,TRUE
+nl,Netherlands,EMEA,TRUE
+no,Norway,EMEA,TRUE
+np,Nepal,APAC,TRUE
+nr,Nauru,APAC,TRUE
+nu,Niue,APAC,TRUE
+nz,New Zealand,APAC,TRUE
+om,Oman,EMEA,TRUE
+pa,Panama,LATAM,TRUE
+pe,Peru,LATAM,TRUE
+pf,French Polynesia,EMEA,TRUE
+pg,Papua New Guinea,APAC,TRUE
+ph,Philippines,APAC,TRUE
+pk,Pakistan,APAC,TRUE
+pl,Poland,EMEA,TRUE
+pm,Saint Pierre and Miquelon,EMEA,TRUE
+pn,Pitcairn,APAC,TRUE
+pr,Puerto Rico,LATAM,TRUE
+ps,"Palestine, State of",EMEA,TRUE
+pt,Portugal,EMEA,TRUE
+pw,Palau,APAC,TRUE
+py,Paraguay,LATAM,TRUE
+qa,Qatar,EMEA,TRUE
+re,Réunion,EMEA,TRUE
+ro,Romania,EMEA,TRUE
+rs,Serbia,EMEA,TRUE
+ru,Russian Federation,EMEA,TRUE
+rw,Rwanda,EMEA,TRUE
+sa,Saudi Arabia,EMEA,TRUE
+sb,Solomon Islands,APAC,TRUE
+sc,Seychelles,EMEA,TRUE
+sd,Sudan,EMEA,TRUE
+se,Sweden,EMEA,TRUE
+sg,Singapore,APAC,TRUE
+sh,"Saint Helena, Ascension and Tristan da Cunha",EMEA,TRUE
+si,Slovenia,EMEA,TRUE
+sk,Slovakia,EMEA,TRUE
+sl,Sierra Leone,EMEA,TRUE
+sm,San Marino,EMEA,TRUE
+sn,Senegal,EMEA,TRUE
+so,Somalia,EMEA,TRUE
+sr,Suriname,LATAM,TRUE
+ss,South Sudan,EMEA,TRUE
+st,Sao Tome and Principe,EMEA,TRUE
+sv,El Salvador,LATAM,TRUE
+sx,Sint Maarten,EMEA,TRUE
+sy,Syrian Arab Republic,EMEA,TRUE
+sz,Swaziland,EMEA,TRUE
+tc,Turks and Caicos Islands,LATAM,TRUE
+td,Chad,EMEA,TRUE
+tf,French Southern Territories,EMEA,TRUE
+tg,Togo,EMEA,TRUE
+th,Thailand,APAC,TRUE
+tj,Tajikistan,EMEA,TRUE
+tk,Tokelau,APAC,TRUE
+tl,Timor-Leste,APAC,TRUE
+tm,Turkmenistan,EMEA,TRUE
+tn,Tunisia,EMEA,TRUE
+to,Tonga,APAC,TRUE
+tr,Turkey,EMEA,TRUE
+tt,Trinidad and Tobago,LATAM,TRUE
+tv,Tuvalu,APAC,TRUE
+tw,"Taiwan, Province of China",APAC,TRUE
+tz,"Tanzania, United Republic of",EMEA,TRUE
+ua,Ukraine,EMEA,TRUE
+ug,Uganda,EMEA,TRUE
+um,United States Minor Outlying Islands,APAC,TRUE
+us,United States of America,NA,TRUE
+uy,Uruguay,LATAM,TRUE
+uz,Uzbekistan,EMEA,TRUE
+va,Holy See,EMEA,TRUE
+vc,Saint Vincent and the Grenadines,LATAM,TRUE
+ve,"Venezuela, Bolivarian Republic of",LATAM,TRUE
+vg,"Virgin Islands, British",LATAM,TRUE
+vi,"Virgin Islands, U.S.",LATAM,TRUE
+vn,Vietnam,APAC,TRUE
+vu,Vanuatu,APAC,TRUE
+wf,Wallis and Futuna,EMEA,TRUE
+ws,Samoa,APAC,TRUE
+ye,Yemen,EMEA,TRUE
+yt,Mayotte,EMEA,TRUE
+za,South Africa,EMEA,TRUE
+zm,Zambia,EMEA,TRUE
+zw,Zimbabwe,EMEA,TRUE

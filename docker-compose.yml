@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DBT_PROFILE_DIR=/dbt
+      - DBT_PROFILES_DIR=/dbt
+    volumes:
+      - ./path/to/dbt_project:/dbt
+    command: ["./server"]
+    user: root

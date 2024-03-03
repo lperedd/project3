@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: reference_data
+    database: acme_ecommerce
+    schema: reference_data
+    tables:
+      - name: countries
+        description: "List of countries"
+        columns:
+          - name: alpha_2_country_code
+            tests:
+              - not_null
+      - name: customers
+      - name: products
+      - name: forecasts
+  - name: product_inventory
+    database: acme_ecommerce
+    schema: product_inventories
+    tables:
+      - name: inventory
+
+  - name: transactional_orders
+    database: acme_ecommerce
+    schema: transactional
+    tables:
+      - name: orders_2024_q3
+      - name: orders_2024_q4
+

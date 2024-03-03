@@ -1,0 +1,16 @@
+customer_code,first_name,last_name,email,country_id
+1,Jo,Jones,a@b.com,gb
+2,Jim,Jones,b@b.com,gb
+3,Jill,Jones,c@b.com,gb
+4,Jack,Jones,d@b.com,gb
+5,John,Jones,@b.com,gb
+6,Jibin,Jones,a@bcom,gb
+7,Jake,Jones,a@.com,gb
+8,Jeffrey,Glasman,ab.com,gb
+9,Jorge,Back,a@b.cof,gb
+10,Jason,Hobbit,z@b.com,gb
+11,Jack,Bagg,x@b.com,cc
+12,Jasper,Carrot,y@b.com,us
+13,John-John,Silver,m@b.com,us
+14,Jabba,(the) Hut,n@b.com,us
+15,Jubb-Jubb,Jones,a@b.com,us

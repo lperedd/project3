@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "ANALYTICS"."ANALYTICS_USER"."ORDERS_2024_Q4";
+    -- dbt seed --
+    
+            insert into analytics.ANALYTICS_USER.orders_2024_q4 (transaction_id, product_id, customer_id, quantity, transaction_price_usd, transaction_date, shipping_date) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

@@ -1,0 +1,21 @@
+version: 2
+
+exposures:
+  - name: ecommerce_sales_by_customer_analysis
+    label: Sales by Customer (for EMK)
+    type: analysis
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Report on the sales from our eCommerce platform.
+      The two key measures that I need to report on are Order Quantity & Order Value.
+      The Sales Manager will be using this dataset to drive an electronic marketing campaign, so please ensure that:
+      - Any invalid email addresses have been removed
+      - Any orders with a missing or invalid customer reference are excluded
+
+    depends_on:
+      - ref('ecommerce__sales_by_customer')
+
+    owner:
+      name: Luis & Sales Manager
+      email: data@dbt.com

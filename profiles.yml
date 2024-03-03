@@ -1,0 +1,72 @@
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+
+default:
+  outputs:
+    prod:
+
+
+      type: snowflake
+      account: "pajfrmr-fd96872"
+      user: "ANALYTICS_USER"
+      password: "Infosum8-8"
+      role: "ACCOUNTADMIN"
+      warehouse: "compute_wh"
+      database: analytics
+      schema: "ANALYTICS_USER"
+
+      threads: 4
+      client_session_keep_alive: False
+      reuse_connections: True
+  target: prod
+
+profile_reference_data:
+  outputs:
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'compute_wh') }}"
+      database: acme_ecommerce
+      schema: "reference_data"
+      threads: 4
+      client_session_keep_alive: False
+      reuse_connections: True
+  target: prod
+
+profile_product_inventories:
+  outputs:
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'compute_wh') }}"
+      database: acme_ecommerce
+      schema: "product_inventories"
+      threads: 4
+      client_session_keep_alive: False
+      reuse_connections: True
+  target: prod
+
+profile_transactional:
+  outputs:
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'compute_wh') }}"
+      database: acme_ecommerce
+      schema: "transactional"
+      threads: 4
+      client_session_keep_alive: False
+      reuse_connections: True
+  target: prod
+
+config:
+  send_anonymous_usage_stats: False
