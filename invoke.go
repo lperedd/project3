@@ -24,7 +24,7 @@ func main() {
 	http.HandleFunc("/", handler)
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "34854"
 	}
 	log.Printf("helloworld: listening on %s", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
